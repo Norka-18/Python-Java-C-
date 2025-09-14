@@ -1,0 +1,17 @@
+public class Main 
+{
+    public static void main(String[] args) {
+        String a = "AaBbCc";
+        
+        System.out.println("a[::2] -> " + getEveryNthChar(a, 2, 0));
+        System.out.println("a[1::2] -> " + getEveryNthChar(a, 2, 1));
+    }
+
+    private static String getEveryNthChar(String str, int step, int start) {
+        StringBuilder result = new StringBuilder();
+        for (int i = start; i < str.length(); i += step) {
+            result.append(str.charAt(i));
+        }
+        return result.toString();
+    }
+}
